@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}設定{% endblock %}
+{% block body %}
+    <div class="page-header">
+        <h1>設定</h1>
+    </div>
+    <div class="row">
+        <div class="col-sm-10">
+            <label class="col-sm-10 control-label">
+                {% for t in table %}
+                    <form action="" method="get">
+                        <label>{{ t.ID }}:<input type="text" name="{{ t.ID }}_update" size="30" maxlength="20" placeholder="{{t.Name}}"></label>
+                        <input type="submit" value="更新">
+                    </form>
+                {% endfor %}
+            </label>
+            <label class="col-sm-2 control-label">
+                <div>
+                    <button class="button home" type="button" onclick="location.href='{% url 'home:home' %}'">ホーム</button>
+                </div>
+                <div>
+                    <button class="button logs" type="button" onclick="location.href='{% url 'home:logs' %}'">ログ</button>
+                </div>
+            </label>
+        </div>
+    </div>
+    <br>
+    アラートの設定時間変更<br>
+    ブラウザを消す?<br>
+    
+{% endblock %}

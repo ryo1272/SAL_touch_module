@@ -1,0 +1,20 @@
+@charset "UTF-8";
+.button{
+    font-size: 1.4em;
+    font-weight: bold;
+    width: 100px;
+    height: 50px;
+    border-style: none;
+}
+.button.setting{
+    background-color: #248;
+    color: #fff;
+}
+.button.logs{
+    background-color: rgb(46, 211, 175);
+    color: #fff;
+}
+.button.home{
+    background-color: rgb(231, 224, 125);
+    color: #fff;
+}
